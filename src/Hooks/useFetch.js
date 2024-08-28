@@ -43,6 +43,7 @@ const useFetch = (url) => {
         },[url])
 
         //added line for test purpose
+        //new line for test
 
         return {data, isPending, error};
 
