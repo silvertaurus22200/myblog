@@ -11,7 +11,7 @@ const useFetch = (url) => {
 
             const abortCont = new AbortController();
 
-            setTimeout(() => {
+        
                 fetch(url, {signal : abortCont.signal})
                 .then(res => 
                 {
@@ -34,7 +34,6 @@ const useFetch = (url) => {
                         setIsPending(false);
                     }
                 });
-            }, 10000);
 
             return ()=>{
                 console.log('cleanup')
